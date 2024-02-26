@@ -1,0 +1,19 @@
+.overlay {
+
+    z-index: 2;
+
+  }
+
+  .overlay2 {
+
+    z-index: 1;
+
+  }
+
+  .questionform2{
+    height: auto;
+    width: 300px;
+    margin-top: 50px;
+    background-color: #e66161;
+    border-radius: 8px;  
+}

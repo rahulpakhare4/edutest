@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Table</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/mycss.css" type="text/css" rel="stylesheet">
+    <link href="css/mathtable.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="js/math.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/mathtableonload.js"></script>
+
+
+</head>
+
+
+<body>
+    <div id="header">
+        <div class="container-fluid">
+            <div class="row align-items-end ">
+
+                <div class="row col-md-5 align-items-center">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <a href="indexmath.html">
+                                <image src="images/logo.png" class="img"></image>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="mybox col-md-8  ">
+                        <h1 id="logo">EduTest</h1>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-7">
+                    <ul id="menu" class="float-md-end">
+                        <li><a href="indexmath.html">Home</a></li>
+                        <li><a href="addition.html">Addition</a></li>
+                        <li><a href="substraction.html">Substraction</a></li>
+                        <li><a href="division.html">Division</a></li>
+                        <li><a href="multiplication.html">Multiplication</a></li>
+                        <li><a href="bodmas.html">Bodmas</a></li>
+                        <li><a href="mathtable.html" class="active">Math Table</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container"></div>
+    <div class="row "> </div>
+    <center>
+        <div class="col-lg-5">
+            <div class="row text-center">
+                <p id="message"></p>
+            </div>
+        </div>
+    </center>
+    <div class="questionform2 container">
+
+        <div class=" row justify-content-center">
+
+
+            <div class="col-8 text-center p-1 mt-1 myfont" id="mynum" >Table Number </div>
+        <center>
+            <form class="col-md-10">
+                    
+                <div class="form-group">
+                    <input type="text" class="form-control mt-2" id="tb1">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mt-2" id="tb2">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mt-2" id="tb3" >
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mt-2" id="tb4">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mt-2" id="tb5">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mt-2" id="tb6">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mt-2 mb-3" id="tb7">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mt-2 mb-3" id="tb8">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mt-2 mb-3" id="tb9">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control mt-2 mb-3" id="tb10">
+                </div>
+                </div>
+            </form>
+        </center>
+            
+            <div class="row justify-content-center">
+                <button type="button" class="btn btn-primary col-md-5 col-sm-6 mb-2 col-5  mybtncolor mybtnmargin" id="ssubbtn" onclick="starttable()">Next</button>
+                <button type="button" class="btn btn-primary col-md-5 col-sm-6 mb-2 col-5  mybtncolor mybtnmargin" id="chkbtn" onclick="checkAns()">Check Answer</button>
+            </div>
+
+            <center>
+                <div id="correctans" class="col-md-12"></div>
+            </center>
+
+            <p id="rest1" class ="myfont d-none">Answer</p>
+            <div class="row" id="result"></div>
+            
+        </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container align-self-end ">
+        <footer class="py-3 my-4 ">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="indexmath.html" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="addition.html" class="nav-link px-2 text-muted">Addition</a></li>
+                <li class="nav-item"><a href="substraction.html" class="nav-link px-2 text-muted">Substraction</a></li>
+                <li class="nav-item"><a href="division.html" class="nav-link px-2 text-muted">Division</a></li>
+                <li class="nav-item"><a href="multiplication.html" class="nav-link px-2 text-muted">Multiplication</a>
+                </li>
+                <li class="nav-item"><a href="bodmas.html" class="nav-link px-2 text-muted">Bodmas</a></li>
+                <li class="nav-item"><a href="mathtable.html" class="nav-link px-2 text-muted">Math Table</a></li>
+            </ul>
+            <p class="text-center text-muted">&copy; 2023 Tejal E-Learning</p>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

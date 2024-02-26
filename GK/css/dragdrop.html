@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            margin: 100px auto;
+        }
+
+        .boxs {
+            width: 200px;
+            height: 250px;
+            background-color: blueviolet;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        p {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            margin: 10px auto;
+            padding: 5px;
+            width: 80%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1 id="h">DRAG and DROP</h1>
+    </center>
+
+    <div class="main">
+        <div class="boxs">
+            <p draggable="true" id="p">1</p>
+            <p draggable="true" id="p">2</p>
+            <p draggable="true" id="p">3</p>
+            <p draggable="true" id="p">4</p>
+            <p draggable="true" id="p">5</p>
+        </div>
+
+        <div class="boxs"></div>
+        <div class="boxs"></div>
+        <div class="boxs"></div>
+    </div>
+
+    <script>
+
+        var p = document.getElementsByTagName('p');
+        var boxs = document.getElementsByClassName('boxs');
+        var dragitems = null;
+        var h = document.getElementById('h');
+        for (var i of p) {
+            i.addEventListener('dragstart', dragstart);
+            i.addEventListener('dragend', dragend);
+        }
+
+
+        function dragstart() {
+            dragitems = this;
+            setTimeout(() => this.style.display = "none", 0);
+        }
+
+        function dragend() {
+            setTimeout(() => this.style.display = "block", 0);
+            dragitems = null;
+
+        }
+        for (var b of boxs) {
+            b.addEventListener('dragover', dragover);
+            b.addEventListener('dragenter', dragenter);
+            b.addEventListener('dragleave', dragleave);
+            b.addEventListener('drop', drop);
+        }
+
+        function dragover(e) {
+            e.preventDefault();
+            h.innerHTML = 'Dragging';
+            h.style.color = 'red';
+            this.style.boxShadow = "0 0 30px green";
+            console.log("he");
+        }
+
+        function dragenter(e) {
+            e.preventDefault();
+            console.log("he");
+        }
+
+        function dragleave() {
+            this.style.boxShadow = "none";
+            console.log("he");
+        }
+
+        function drop() {
+            this.append(dragitems)
+            h.innerHTML = 'Dropped';
+            h.style.color = 'green';
+
+
+        }
+
+
+
+    </script>
+ 
+
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+body {
+  background-color: #f3a683;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  color: white;
+  background: #e74c3c;
+  padding: 20px;
+  height: fit-content;
+}
+
+#logo {
+  font-size: 2rem;
+  margin-top: 5px;
+}
+
+#menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li {
+  display: inline-block;
+
+}
+
+#menu li a {
+  color: white;
+  background-color: #f39c12;
+  padding: 10px 10px;
+  display: inline-block;
+  border-radius: 0px;
+  margin-top: 5px;
+}
+
+#menu li a:hover {
+
+  background-color: #c0392b;
+
+}
+
+.questionform {
+  height: auto;
+  width: auto;
+  margin-top: 80px;
+  background-color: #e66161;
+  border-radius: 8px;
+  padding: 2rem;
+
+}
+
+.onloadmargin {
+  height: 400px;
+  margin-top: 0px;
+  background-color: #e66161;
+  border-radius: 8px;
+
+}
+
+
+
+.myrow {
+
+  background-color: #ec7c71;
+  border-radius: 8px;
+
+}
+
+.myinput {
+  margin-left: 5px;
+
+}
+
+
+.myfont {
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+
+.myhide {
+  background-color: #e66161;
+  ;
+
+}
+
+.mywidth {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.mybtncolor {
+  background-color: #c60808;
+  border-color: #c60808;
+}
+
+
+
+.mybtncolor:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+#menu li a.active {
+
+  background-color: #c0392b;
+
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+
+.img {
+  align-items: center;
+}
+
+* {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.mypara {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+}
+
+
+
+.homecontent {
+  margin-top: 5rem;
+}
+
+.mytext {
+  font-size: 20px;
+  font-family: cursive;
+  color: aliceblue;
+  background-color: #492a28e6;
+  padding: 1rem;
+  border-radius: 1rem;
+
+}
+
+#message {
+  font-size: 20px;
+  font-family: cursive;
+  color: aliceblue;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: -80px;
+  text-align: justify;
+}
+
+.mycontainer2 {
+  background-color: #e66161;
+  height: auto;
+  border-radius: 15px;
+}
+
+.mycontainer3 {
+  background-color: #4f3e8e;
+  height: auto;
+
+}
+
+h2 {
+  text-align: center;
+}
+
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.mybtnmargin {
+  margin-left: 1rem;
+}
+
+

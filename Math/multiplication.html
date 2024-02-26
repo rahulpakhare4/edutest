@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication</title>
+
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/mycss.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="js/math.js"></script>
+    <script src="js/multiplication.js"></script>
+
+    
+</head>
+
+
+<body>
+    <div id="header">
+        <div class="container-fluid">
+            <div class="row align-items-end ">
+
+                <div class="row col-md-5 align-items-center">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <a href ="indexmath.html"><image src="images/logo.png" class="img"></image></a>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>    
+                    <div class="mybox col-md-8  ">
+                        <h1 id="logo">EduTest</h1>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-7">
+                    <ul id="menu" class="float-md-end">
+                        <li><a href="indexmath.html">Home</a></li>
+                        <li><a href="addition.html">Addition</a></li>
+                        <li><a href="substraction.html" >Substraction</a></li>
+                        <li><a href="division.html" >Division</a></li>
+                        <li><a href="multiplication.html" class="active">Multiplication</a></li>
+                        <li><a href="bodmas.html">Bodmas</a></li>
+                        <li><a href="mathtable.html">Math Table</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container ">
+        <div class="row justify-content-center">
+            <div class="row col-md-8 ">
+                <div class="row"><p id="message"></p></div>
+                <div class="row align-content-center questionform justify-content-center">
+                    <div class="col-11 myrow p-3 m-2 myfont">Multiplication</div>
+                    <div class="col-11 myrow p-3 m-2 myfont" id="nm1">Number 1</div>
+                    
+                    <div class="col-11 myrow p-3 m-2 myfont" id="nm2">Number 2</div>
+
+                    <div class="myhide col-11 myrow p-3 m-2 ">
+                        <div class="row">
+                            <button type="button" class=" mywidth mybtncolor btn btn-primary col-3" id="btn1"
+                                onclick="starttestMultiplication()">Next</button>
+                            <input class=" mywidth myinput col-8 " placeholder="Answer" id="in1">
+                        </div>
+                    </div>
+                    <div class="myhide col-1 myrow p-3 m-2 myfont" id="result">Result: </div>
+                    <div id= "correctans" class ="col-10 "></div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <div class="container align-self-end ">
+        <footer class="py-3 my-4 ">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="indexmath.html" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="addition.html" class="nav-link px-2 text-muted">Addition</a></li>
+                <li class="nav-item"><a href="substraction.html" class="nav-link px-2 text-muted">Substraction</a></li>
+                <li class="nav-item"><a href="division.html" class="nav-link px-2 text-muted">Division</a></li>
+                <li class="nav-item"><a href="multiplication.html" class="nav-link px-2 text-muted">Multiplication</a></li>
+                <li class="nav-item"><a href="bodmas.html" class="nav-link px-2 text-muted">Bodmas</a></li>
+                <li class="nav-item"><a href="mathtable.html" class="nav-link px-2 text-muted">Math Table</a></li>
+            </ul>
+            <p class="text-center text-muted">&copy; 2023 Tejal E-Learning</p>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>

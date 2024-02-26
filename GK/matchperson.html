@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Person Names</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="css/mycss.css" type="text/css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        .sticky-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            margin: 100px auto;
+        }
+
+        .boxs {
+            width: 250px;
+            height: auto;
+            background-color: #d06a42;
+            padding: 25px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and (max-width:1150px) {
+            .boxs {
+                width: 200px;
+            }
+
+        }
+
+        @media screen and (max-width:800px) {
+            .boxs {
+                width: 200px;
+            }
+
+            .logoimg, #logo, .footer{
+                display: none;
+            }
+            
+        }
+
+
+        .todrop {
+            background-color: rgb(104, 46, 46);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            margin: 10px auto;
+            padding: 5px;
+            width: 80%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #myposition {
+            position: fixed;
+            top: 200px;
+            left: 10px;
+        }
+
+        img {
+            width: 200px;
+            height: 300px;
+            border: 4px solid #631515;
+        }
+    </style>
+
+
+
+</head>
+
+
+<body>
+    <div id="header" class="sticky-top">
+        <div class="container-fluid">
+            <div class="row align-items-end ">
+
+                <div class="row col-md-5 align-items-center">
+                    <div class="col-md-3">
+                        <div class="text-center">
+                            <a href="indexenglish.html">
+                                <image src="images/logo.png" class="img logoimg"></image>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="mybox col-md-8  ">
+                        <h1 id="logo">EduTest</h1>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-7">
+                    <ul id="menu" class="float-md-end">
+                        <li><a href="indexgk.html">Home</a></li>
+                        <li><a href="matchperson.html" class="active">Match Person Names</a></li>
+                        
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="container-fluid">
+        <center>
+            <h1 id="h">Match Person Names</h1>
+        </center>
+
+
+        <div class="row">
+
+            <div class="col-3 boxs " id="myposition">
+                <p draggable="true" id="p" class="todrop ">BR Ambedkar</p>
+                <p draggable="true" id="p" class="todrop">Indira Gandhi</p>
+                <p draggable="true" id="p" class="todrop">Jawaharlal Nehru</p>
+                <p draggable="true" id="p" class="todrop">Pratibha Patil</p>
+                <p draggable="true" id="p" class="todrop">Saina Nehwal</p>
+                <p draggable="true" id="p" class="todrop">Kiran Bedi</p>
+                <p draggable="true" id="p" class="todrop">Mother Teresa</p>
+                <p draggable="true" id="p" class="todrop">Kalpana Chawla</p>
+                <p draggable="true" id="p" class="todrop">PT Usha</p>
+                <p draggable="true" id="p" class="todrop">Lata Mangeshkar</p>
+                <center>
+                    <button type="button" class="btn btn-secondary " onclick="checkans()">CHECK ANSWER</button>
+                </center>
+
+            </div>
+
+
+            <div class="col-8 offset-5 offset-lg-3 offset-sm-4 offset-md-3" id="myimageposition">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="BR Ambedkar">
+                            <img src="images/BR Ambedkar.jpg" alt="Lights" style="width:100%">
+                            <div class="caption boxs" id="getans1">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 ">
+                        <div class="Indira Gandhi">
+
+                            <img src="images/Indira Gandhi.png" alt="Nature" style="width:100%">
+                            <div class="caption boxs" id="getans2">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="Kalpana Chawla">
+                            <img src="images/Kalpana Chawla.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption boxs" id="getans3">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4">
+                        <div class="Kiran Bedi">
+                            <img src="images/Kiran Bedi.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption boxs" id="getans4"></div>
+
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4">
+                        <div class="Lata Mangeshkar">
+                            <img src="images/Lata Mangeshkar.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption boxs" id="getans5"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4">
+                        <div class="Mother Teresa">
+                            <img src="images/Mother Teresa.jpeg" alt="Fjords" style="width:100%">
+                            <div class="caption boxs" id="getans6"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4">
+                        <div class="Pratibha Patil">
+                            <img src="images/Pratibha Patil.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption boxs" id="getans7"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4">
+                        <div class="PT Usha">
+                            <img src="images/PT Usha.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption boxs" id="getans8"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4">
+                        <div class="Saina Nehwal">
+                            <img src="images/Saina Nehwal.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption boxs" id="getans9"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="Jawaharlal Nehru">
+                            <img src="images/Jawaharlal Nehru.jpg" alt="Fjords" style="width:100%">
+                            <div class="caption boxs" id="getans10"></div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container align-self-end footer" >
+        <footer class="py-3 my-4 ">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="indexgk.html" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="matchperson.html" class="nav-link px-2 text-muted">Match Person Names</a></li>
+                
+
+            </ul>
+            <p class="text-center text-muted">&copy; 2023 Tejal E-Learning</p>
+        </footer>
+    </div>
+
+    <script>
+        var p = document.getElementsByTagName('p');
+        var boxs = document.getElementsByClassName('boxs');
+        var dragitems = null;
+        var h = document.getElementById('h');
+
+
+
+
+        for (var i of p) {
+            i.addEventListener('dragstart', dragstart);
+            i.addEventListener('dragend', dragend);
+        }
+
+
+        function dragstart() {
+            dragitems = this;
+            setTimeout(() => this.style.display = "none", 0);
+        }
+
+        function dragend() {
+            setTimeout(() => this.style.display = "block", 0);
+            dragitems = null;
+
+        }
+
+        for (var b of boxs) {
+            b.addEventListener('dragover', dragover);
+            b.addEventListener('dragenter', dragenter);
+            b.addEventListener('dragleave', dragleave);
+            b.addEventListener('drop', drop);
+
+        }
+
+        function dragover(e) {
+            e.preventDefault();
+        }
+
+        function dragenter(e) {
+            e.preventDefault();
+        }
+
+        function dragleave() {
+            this.style.boxShadow = "none";
+        }
+
+
+        function drop() {
+            this.append(dragitems)
+        }
+
+
+        function checkans() {
+            image1()
+            image2()
+            image3()
+            image4()
+            image5()
+            image6()
+            image7()
+            image8()
+            image9()
+            image10()
+        }
+
+
+        function image1() {
+            a = document.getElementById('getans1').innerText;
+            b = document.getElementById('getans1').parentElement.className;
+            if (a == b) {
+                getans1.style.boxShadow = "0 0 30px green";
+
+            }
+            else {
+                getans1.style.boxShadow = "0 0 30px red";
+            }
+        }
+
+        function image2() {
+            a = document.getElementById('getans2').innerText;
+            b = document.getElementById('getans2').parentElement.className;
+            if (a == b) {
+                getans2.style.boxShadow = "0 0 30px green";
+            }
+            else {
+                getans2.style.boxShadow = "0 0 30px red";
+            }
+        }
+
+        function image3() {
+            a = document.getElementById('getans3').innerText;
+            b = document.getElementById('getans3').parentElement.className;
+            if (a == b) {
+                getans3.style.boxShadow = "0 0 30px green";
+            }
+
+            else {
+                getans3.style.boxShadow = "0 0 30px red";
+            }
+        }
+
+
+
+        function image4() {
+            a = document.getElementById('getans4').innerText;
+            b = document.getElementById('getans4').parentElement.className;
+            if (a == b) {
+                getans4.style.boxShadow = "0 0 30px green";
+            }
+
+            else {
+                getans4.style.boxShadow = "0 0 30px red";
+            }
+        }
+
+
+
+
+        function image5() {
+
+            a = document.getElementById('getans5').innerText;
+            b = document.getElementById('getans5').parentElement.className;
+            if (a == b) {
+                getans5.style.boxShadow = "0 0 30px green";
+            }
+            else {
+                getans5.style.boxShadow = "0 0 30px red";
+            }
+        }
+
+
+        function image6() {
+
+            a = document.getElementById('getans6').innerText;
+            b = document.getElementById('getans6').parentElement.className;
+            if (a == b) {
+                getans6.style.boxShadow = "0 0 30px green";
+            }
+
+            else {
+                getans6.style.boxShadow = "0 0 30px red";
+            }
+        }
+
+
+        function image7() {
+
+            a = document.getElementById('getans7').innerText;
+            b = document.getElementById('getans7').parentElement.className;
+            if (a == b) {
+                getans7.style.boxShadow = "0 0 30px green";
+            }
+
+            else {
+                getans7.style.boxShadow = "0 0 30px red";
+            }
+        }
+
+
+
+        function image8() {
+
+            a = document.getElementById('getans8').innerText;
+            b = document.getElementById('getans8').parentElement.className;
+            if (a == b) {
+                getans8.style.boxShadow = "0 0 30px green";
+            }
+
+            else {
+                getans8.style.boxShadow = "0 0 30px red";
+            }
+        }
+
+
+        function image9() {
+
+            a = document.getElementById('getans9').innerText;
+            b = document.getElementById('getans9').parentElement.className;
+            if (a == b) {
+                getans9.style.boxShadow = "0 0 30px green";
+            }
+
+            else {
+                getans9.style.boxShadow = "0 0 30px red";
+            }
+        }
+
+
+        function image10() {
+
+            a = document.getElementById('getans10').innerText;
+            b = document.getElementById('getans10').parentElement.className;
+            if (a == b) {
+                getans10.style.boxShadow = "0 0 30px green";
+            }
+
+            else {
+                getans10.style.boxShadow = "0 0 30px red";
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+        /*
+        function mouseOver() {
+          document.getElementById("getans").style.Color = "red";
+          j = document.getElementById('getans').innerText;   
+                    console.log(j);
+        }
+        
+        function mouseOut() {
+          document.getElementById("getans").style.Color = "black";
+          j = document.getElementById('getans').innerText;   
+                    console.log(j);
+        }
+        */
+
+    </script>
+</body>
+
+</html>
